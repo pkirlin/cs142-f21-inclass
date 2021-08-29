@@ -1,4 +1,4 @@
-# Leroy and the Cookies
+# Leroy and the Cookies Lab
 
 Team members (edit these):
 1. Team member 1
