@@ -4,6 +4,7 @@ import java.util.Scanner;
  * This is a game where Leroy tries to eat nine cookies in a line.  Unfortunately,
  * he can only do it in a certain way, by rolling dice.
  */
+
 public class LeroyAndTheCookies {
     public static void main(String[] args) {
         System.out.println("Leroy has nine cookies from the Rat, numbered 1-9 in a line, like this:");
