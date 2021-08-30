@@ -81,6 +81,8 @@ better on your own.
     Explain the line of code that says `int roll = (int)(1 + Math.random() * 6);`,
     in particular, mention why there is a 1 added to the random number, and why
     the `(int)` part is there.
+    
+   __Answer__:
 
 6. Under what circumstances do you roll a different number of dice?
 
