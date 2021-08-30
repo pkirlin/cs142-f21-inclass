@@ -41,7 +41,7 @@ public class LeroyAndTheCookies {
             System.out.print("How many cookies should Leroy eat? ");
             int count = scanner.nextInt();
             if (count == 0) {
-                System.out.println("Game over. Leroy's final score is " + score + ".");
+                System.out.println("Game over. Leroy doesn't win, but earns a final score of " + score + ".");
                 break;
             }
 
