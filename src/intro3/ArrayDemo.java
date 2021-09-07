@@ -35,6 +35,13 @@ public class ArrayDemo {
 
         // Write code to print out all the numbers in the randomNumbers array, and their average.
         // If you finish quickly, also find and print the minimum and maximum number.
-
+        double sum = 0;
+        for (int i = 0; i < randomNumbers.length; i++)
+        {
+            System.out.println("the number is " + randomNumbers[i]);
+            sum = sum + randomNumbers[i];
+        }
+        System.out.println("The sum is " + sum);
+        System.out.println("The average is " + sum/randomNumbers.length);
     }
 }
