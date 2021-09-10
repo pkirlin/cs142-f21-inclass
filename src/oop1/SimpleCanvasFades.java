@@ -17,5 +17,9 @@ public class SimpleCanvasFades {
         // they want to see at the bottom of the screen, and make your canvas fade
         // from black at the top to whatever color the user wants at the bottom.
 
+        for (int i = 0; i < 256; i++)
+        {
+
+        }
     }
 }
