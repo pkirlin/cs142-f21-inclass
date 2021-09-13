@@ -17,9 +17,15 @@ public class SimpleCanvasFades {
         // they want to see at the bottom of the screen, and make your canvas fade
         // from black at the top to whatever color the user wants at the bottom.
 
+        SimpleCanvas canvas = new SimpleCanvas(256, 256);
+
         for (int i = 0; i < 256; i++)
         {
-
+            Color c = new Color(i, 255-i, 0);
+            canvas.setPenColor(c);
+            canvas.drawLine(0, i, 255, i);
         }
+
+        canvas.show();
     }
 }
