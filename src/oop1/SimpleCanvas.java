@@ -248,7 +248,13 @@ public class SimpleCanvas {
 
     public void update()
     {
-        frame.repaint();
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                frame.repaint();
+            }
+        });
+
     }
 
     private static class RetinaImageIcon extends ImageIcon {
