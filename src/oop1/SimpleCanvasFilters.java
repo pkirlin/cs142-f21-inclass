@@ -26,8 +26,14 @@ public class SimpleCanvasFilters {
             for (int y = 0; y < canvas.getHeight(); y++)
             {
                 // get the color at pixel (x, y)
+                Color c = canvas.getPixelColor(x, y);
                 // get the individual R, G, B components
+                int red = c.getRed();
+                int green = c.getGreen();
+                int blue = c.getBlue();
                 // set the color at (x, y) to the same color as before, but with zero for red
+                Color newColor = new Color(0, green, blue);
+                canvas.setPixelColor(x, y, newColor);
             }
         }
     }

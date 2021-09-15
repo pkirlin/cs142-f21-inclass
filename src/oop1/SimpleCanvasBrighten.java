@@ -18,7 +18,7 @@ public class SimpleCanvasBrighten {
             for (int y = 0; y < canvas.getHeight(); y++)
             {
                 Color c = canvas.getPixelColor(x, y); // retrieve the color at pixel (x, y)
-                Color brighter = c.brighter();
+                Color brighter = c.brighter().brighter().brighter().brighter();
                 canvas.setPixelColor(x, y, brighter);
             }
         }
