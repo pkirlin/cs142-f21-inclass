@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Gotchas {
     public static void main(String[] args)
     {
-        demoGotcha1();
-        //demoGotcha3();
+        //demoGotcha1();
+        demoGotcha3();
     }
 
     public static void demoGotcha1()
@@ -71,7 +71,7 @@ public class Gotchas {
         scanner.nextLine();
 
         parameterCanvas = new SimpleCanvas(200, 200);
-        parameterCanvas.setPenColor(Color.GRAY);
+        //parameterCanvas.setPenColor(Color.GRAY);
         parameterCanvas.drawFilledCircle(100, 100, 50);
         parameterCanvas.show();
         parameterCanvas.update();
