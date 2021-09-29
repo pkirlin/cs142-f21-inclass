@@ -3,7 +3,29 @@ package oop2;
 public class DogDemo {
     public static void main(String[] args)
     {
+        Dog[] dogs = new Dog[3]; // makes space for an array of 3 dogs
         Dog fido = new Dog("Fido", 3, 30);
+        dogs[0] = fido;
+        dogs[1] = new Dog("Toto",7, 10);
+        fido.age++;
+
+        dogs[0].playFetch(); // == fido.playFetch();
+        dogs[1].playWith(dogs[1]);
+
+        for (int i = 0; i < dogs.length; i++)
+        {
+            System.out.println(dogs[i]);
+            //System.out.println(dogs[i].age);
+        }
+
+        System.out.println(fido);
+        System.out.println(dogs[0]);
+        System.out.println(dogs[2]);
+        System.out.println("this is the number of dogs: " + Dog.numberOfDogs);
+        //System.out.println(dogs[3]);
+
+
+
         //fido.age = 3;
         //fido.name = "Fido";
         //fido.weight = 30;

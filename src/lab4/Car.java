@@ -32,6 +32,11 @@ public class Car {
 
     public int drive(CameraView leftOfMe, CameraView aheadOfMe, CameraView rightOfMe)
     {
+        //Car carAheadOfMe = aheadOfMe.getCar();
+        //Color myColor = carAheadOfMe.getColor();
+
+        //Color myColor2 = aheadOfMe.getCar().getColor().;
+
         // red and blue cars are for the first demo
         if (color.equals(Color.RED) || color.equals(Color.BLUE)) {
             if (aheadOfMe.getGround() == '*') {
