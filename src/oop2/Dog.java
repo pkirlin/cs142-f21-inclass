@@ -5,6 +5,7 @@ public class Dog {
     public int weight;
     public int age;
     private int energy;
+    public static int numberOfDogs = 0;
 
     public Dog()
     {
@@ -12,6 +13,7 @@ public class Dog {
         weight = 0;
         age = 0;
         energy = 5;
+        numberOfDogs++;
     }
 
     public Dog(String newName, int newAge, int newWeight)
@@ -20,6 +22,7 @@ public class Dog {
         age = newAge;
         weight = newWeight;
         energy = 5;
+        numberOfDogs++;
     }
 
     public int getEnergy() {
