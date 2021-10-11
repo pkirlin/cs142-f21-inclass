@@ -40,7 +40,7 @@ works and answer the following questions.
 __Your answer here__
 
 - What is the name of the Java method used in the code
-  that is the equivalent of the .size variable for
+  that is the equivalent of the .length variable for
   regular Java arrays? 
 
 __Your answer here__
@@ -255,7 +255,7 @@ constructor allows you to set all four variables when
 the Park is created.
 
 Now we will add code in MemphisMap.java to read the
-memphis-roads.txt file.
+memphis-parks.txt file.
 
 - Go to the top of MemphisMap and add an instance variable
 that will be an ArrayList designed to hold all the parks
