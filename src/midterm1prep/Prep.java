@@ -20,19 +20,20 @@ public class Prep {
 
         int[][] matrix1 = new int[][]
                 {
-                        {4, 2, 1, 0},
-                        {6, 0, 8, 0},
-                        {7, 2, 1, 9},
+                        {7, 0, 1, 9},
+                        {0, 7, 0, 9},
+                        {7, 0, 6, 0},
                 };
-        System.out.println(countZeroRows(matrix1));
+
 
         int[][] matrix2 = new int[][]
                 {
                         {4, 2, 1},
                         {6, 0, 8},
-                        {7, 2, 1},
+                        {0, 0, 0},
                         {0, 2, 1},
                 };
+        System.out.println(countZeroRows2(matrix2));
     }
 
     public static void problem1()
@@ -64,7 +65,7 @@ public class Prep {
         {
             for (int col = 0; col < matrix[row].length; col++)
             {
-                
+
                 if (matrix[row][col] == 0) {
                     count++;
                     break;
@@ -72,5 +73,24 @@ public class Prep {
             }
         }
         return count;
+    }
+
+    public static int countZeroRows2(int[][] matrix)
+    {
+        int countRowsWithAZero = 0;
+        for (int row = 0; row < matrix.length; row++)
+        {
+            int countZerosOnThisRow = 0;
+            for (int col = 0; col < matrix[row].length; col++)
+            {
+                if (matrix[row][col] == 0) {
+                    countZerosOnThisRow++;
+                }
+            }
+            if (countZerosOnThisRow >= 1) {
+                countRowsWithAZero++;
+            }
+        }
+        return countRowsWithAZero;
     }
 }
