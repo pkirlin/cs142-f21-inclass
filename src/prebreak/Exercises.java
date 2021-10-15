@@ -11,12 +11,12 @@ public class Exercises {
         readWords();
     }
 
-    public void reverseArrayList(ArrayList<Integer> list)
+    public static void reverseArrayList(ArrayList<Integer> list)
     {
 
     }
 
-    public String reverseString(String str)
+    public static String reverseString(String str)
     {
         return "";
     }
