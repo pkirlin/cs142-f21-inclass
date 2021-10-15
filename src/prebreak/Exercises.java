@@ -8,12 +8,26 @@ public class Exercises {
 
     public static void main(String[] args)
     {
-        readWords();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(2);
+        list.add(4);
+        list.add(6);
+        list.add(8);
+        list.add(10);
+        reverseArrayList(list);
     }
 
-    public void reverseArrayList(ArrayList<Integer> list)
+    public static void reverseArrayList(ArrayList<Integer> list)
     {
-
+        int j = list.size() - 1;
+        for (int i = 0; i < list.size()/2; i++)
+        {
+            int temp = list.get(i);
+            list.set(i, list.get(j));
+            list.set(j, temp);
+            System.out.println("swap index " + i + " with " + j);
+            j--;
+        }
     }
 
     public String reverseString(String str)
