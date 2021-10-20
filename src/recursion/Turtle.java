@@ -9,10 +9,10 @@ public class Turtle {
     private double angle;    // facing this many degrees counterclockwise from the x-axis
     private int speed = 10;
 
-    public Turtle(int height, int width) {//double x0, double y0, double a0) {
-        canvas = new SimpleCanvas(height, width, "Turtle Graphics");
-        x = height / 2;
-        y = width / 2;
+    public Turtle(int width, int height) {//double x0, double y0, double a0) {
+        canvas = new SimpleCanvas(width, height, "Turtle Graphics");
+        x = width / 2;
+        y = height / 2;
         angle = -90;
         canvas.show();
         canvas.pause(10000/speed);
