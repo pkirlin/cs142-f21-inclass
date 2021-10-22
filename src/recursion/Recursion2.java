@@ -4,16 +4,13 @@ public class Recursion2 {
 
     public static void main(String[] args)
     {
+        System.out.println(reverseRec("abcd"));
         for (int i = 1; i <= 10; i++)
         {
-            long factAnswer = fact(i);
-            System.out.println("The factorial of " + i + " is " + factAnswer);
+            long factAnswer = fib(i);
+            System.out.println("The fibonacci of " + i + " is " + factAnswer);
         }
-        for (int i = 1; i <= 10; i++)
-        {
-            long factAnswer = factRec(i);
-            System.out.println("The factorial of " + i + " is " + factAnswer);
-        }
+
     }
 
     /** Factorial, iterative version */
@@ -69,7 +66,17 @@ public class Recursion2 {
      */
     public static String reverseRec(String str)
     {
-        return ""; // remove this when you start coding
+        System.out.println("calling reverse with str=" + str);
+        if (str.length() == 1)
+        {
+            return str;
+        }
+        else {
+            char lastChar = str.charAt(str.length()-1);
+            String revSmaller = reverseRec(str.substring(0, str.length()-1));
+            String answer = lastChar + revSmaller;
+            return answer;
+        }
     }
 
     /**
@@ -83,6 +90,7 @@ public class Recursion2 {
         else {
             System.out.println(n);
             weird(n - 1);
+            System.out.println(n);
         }
     }
 
@@ -90,6 +98,14 @@ public class Recursion2 {
      * Fibonacci sequence.
      */
     public static int fib(int n) {
-        return 0; // remove this
+        if (n <= 1) {
+            return 1;
+        }
+        else {
+            //return fib(n-1) + fib(n-2);
+            int smaller1 = fib(n-1);
+            int smaller2 = fib(n-2);
+            return smaller1 + smaller2;
+        }
     }
 }
