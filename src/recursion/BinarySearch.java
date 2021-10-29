@@ -12,8 +12,8 @@ public class BinarySearch {
         System.out.println("Iterative version: found at index " + indexFound);
 
         // test binary search, iterative version:
-        //indexFound = binarySearchIter(sortedList, 33);
-        //System.out.println("Recursive version: found at index " + indexFound);
+        indexFound = binarySearchRec(sortedList, 33);
+        System.out.println("Recursive version: found at index " + indexFound);
     }
 
 
@@ -23,6 +23,7 @@ public class BinarySearch {
         int high = list.size() - 1;  // far right index
 
         while (high >= low) {
+            System.out.println("low = " + low + " high = " + high);
             int mid = (low + high) / 2;          // find midpoint
             if (list.get(mid) > key) {           // if middle element > key
                 high = mid - 1;                  //   next time, look in left half of arraylist
@@ -37,11 +38,31 @@ public class BinarySearch {
 
     // Recursive binary search.
     public static int binarySearchRec(ArrayList<Integer> list, int key) {
-        return 0;
+        return binarySearchRec(list, key, list.size() - 1, 0);
     }
 
     // Helper method for above.
     public static int binarySearchRec(ArrayList<Integer> list, int key, int high, int low) {
-        return 0;
+        if (low > high) {
+            return -1;  // item not found!  BOOOOOO!!!!
+        }
+        else {
+            int mid = (low + high) / 2;
+            if (list.get(mid) == key) {
+                // found the item!  YAYY!!!
+                return mid;
+            }
+            else if (list.get(mid) > key) { // array[mid] > key, keep left half
+                // recurse on left half of the array
+                //high = mid - 1;
+                //int recursiveCall = binarySearchRec(list, key, mid-1, low);
+                //return recursiveCall;
+                return binarySearchRec(list, key, mid-1, low);
+            }
+            else // array[mid] < key, keep right half
+            {
+                return binarySearchRec(list, key, high, mid + 1);
+            }
+        }
     }
 }
