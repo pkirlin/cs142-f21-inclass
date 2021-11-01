@@ -115,11 +115,11 @@ that person's preference line.
 (top of diagram)
 +-- Try to match Alice
 +-- Assign Alice=President
-+-- Try to match Bob
-+-- Assign Bob=Secretary
-+-- Try to match Carol
-+-- Assign Carol=VP
-+-- Try to match David
+    +-- Try to match Bob
+    +-- Assign Bob=Secretary
+        +-- Try to match Carol
+        +-- Assign Carol=VP
+            +-- Try to match David
 
 - What does wrong when we try to match David?
 
@@ -131,13 +131,13 @@ the diagram, and try to re-assign the most recently-assigned person.
 (top of diagram)
 +-- Try to match Alice
 +-- Assign Alice=President
-+-- Try to match Bob
-+-- Assign Bob=Secretary
-+-- Try to match Carol
-+-- Assign Carol=VP
-+-- Try to match David
-+-- David can't be matched
-+-- Assign Carol=Treasurer
+    +-- Try to match Bob
+    +-- Assign Bob=Secretary
+        +-- Try to match Carol
+        +-- Assign Carol=VP
+            +-- Try to match David
+            +-- David can't be matched
+        +-- Assign Carol=Treasurer
 
 - What goes wrong now?
 
@@ -148,16 +148,16 @@ At this point, Carol has now run out of jobs, so she can't be matched:
 (top of diagram)
 +-- Try to match Alice
 +-- Assign Alice=President
-+-- Try to match Bob
-+-- Assign Bob=Secretary
-+-- Try to match Carol
-+-- Assign Carol=VP
-+-- Try to match David
-+-- David can't be matched
-+-- Assign Carol=Treasurer
-+-- Try to match David
-+-- David can't be matched
-+-- Carol can't be matched
+    +-- Try to match Bob
+    +-- Assign Bob=Secretary
+        +-- Try to match Carol
+        +-- Assign Carol=VP
+            +-- Try to match David
+            +-- David can't be matched
+        +-- Assign Carol=Treasurer
+            +-- Try to match David
+            +-- David can't be matched
+        +-- Carol can't be matched
 
 - When Carol can't be matched, who do we look at now, to try
   to find them a new job?
