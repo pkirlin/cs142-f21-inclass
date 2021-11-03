@@ -12,5 +12,14 @@ public class DogDemo {
 
         System.out.println(fido);
         System.out.println(toto);
+
+        ShowDog jermaine = new ShowDog();
+        jermaine.setAge(4);
+        jermaine.setName("Jermaine");
+        System.out.println(jermaine);
+        jermaine.chase(toto);
+        jermaine.dance();
+        jermaine.setNumTrophies(10);
+        System.out.println("Jermaine has won " + jermaine.getNumTrophies());
     }
 }
