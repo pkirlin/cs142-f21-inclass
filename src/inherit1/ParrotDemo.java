@@ -8,6 +8,14 @@ public class ParrotDemo {
         polly.setColor(Color.BLUE);
         polly.setEnergy(3);
         polly.fly();
+        polly.sleep();
+        polly.sleep();
+        polly.sleep();
         polly.fly();
+
+        PetParrot tweety = new PetParrot();
+        tweety.setName("Tweety");
+        tweety.setEnergy(10);
+        tweety.fly();
     }
 }

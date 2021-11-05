@@ -12,5 +12,13 @@ public class DogDemo {
 
         System.out.println(fido);
         System.out.println(toto);
+
+        ShowDog mufasa = new ShowDog();
+        mufasa.setName("Mufasa");
+        mufasa.setAge(6);
+        System.out.println(mufasa);
+        mufasa.highfiveACat("Simba");
+        mufasa.setMoneyWon(10000);
+        System.out.println("Mufasa has won " + mufasa.getMoneyWon());
     }
 }

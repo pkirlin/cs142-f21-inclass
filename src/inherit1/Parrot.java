@@ -34,7 +34,10 @@ public class Parrot {
         } else {
             System.out.println("The parrot is too tired to fly.");
         }
+    }
 
+    public void sleep() {
+        energy++;
     }
 
 }
