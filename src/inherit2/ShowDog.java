@@ -3,6 +3,11 @@ package inherit2;
 public class ShowDog extends Dog {
     private int numTrophies;
 
+    public ShowDog(String newName, int newAge) {
+        super(newName, newAge);
+        System.out.println("Constructing a showdog object");
+    }
+
     public int getNumTrophies() {
         return numTrophies;
     }
@@ -17,5 +22,16 @@ public class ShowDog extends Dog {
 
         // alternate way to do this:
         // System.out.println(getName() + " is dancing!");  // getName() is public, so anyone can use it.
+    }
+
+    public String toString() {
+        return "Showdog object: name=" + name + " age=" + getAge()
+                + " trophies won=" + numTrophies;
+    }
+
+    public void speak()
+    {
+        //super.speak();
+        System.out.println(name + " speaks French.");
     }
 }
