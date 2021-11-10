@@ -6,8 +6,8 @@ public class PolymorphismDemo {
 
     public static void main(String[] args)
     {
-        testPolymorphism();
-        //dogpark();
+        //testPolymorphism();
+        dogpark();
     }
 
     public static void testPolymorphism()
@@ -37,19 +37,21 @@ public class PolymorphismDemo {
 
         // Not all the dogs can dance, though:
         System.out.println("Test dancing:");
-        //regularDog.dance();
+        //((ShowDog)regularDog).dance();
         showDog.dance();
-        //polymorphDog.dance();
+        ((ShowDog)polymorphDog).dance();
 
         // try calling speaktwice:
         System.out.println("Calling speaktwice:");
-        //speakTwice(regularDog);
+        speakTwice(regularDog);
+        speakTwice(showDog);
+        speakTwice(polymorphDog);
 
         // try creating a random dog:
         Dog d = createRandomDog();
         System.out.println("Is this a dog or a showdog?  We don't know ahead of time:");
-        //d.speak();
-        //d.dance();
+        d.speak();
+        ((ShowDog)d).dance();
     }
 
     // This function takes a Dog object as a parameter, and so also will
@@ -90,7 +92,9 @@ public class PolymorphismDemo {
         {
             System.out.println(d);  // notice how this calls the correct toString() for dogs and showdogs.
             d.speak();
-            //d.dance();
+            if (d instanceof ShowDog) {
+                ((ShowDog)d).dance();
+            }
         }
 
         // What if there is a stuck up showdog that will only play with other showdogs?
@@ -98,7 +102,9 @@ public class PolymorphismDemo {
 
         for (Dog d : listOfDogs)
         {
-            stuckUpDog.chase(d);
+            if (d instanceof ShowDog) {
+                stuckUpDog.chase(d);
+            }
         }
     }
 }
