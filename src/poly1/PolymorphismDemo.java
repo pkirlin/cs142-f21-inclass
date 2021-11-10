@@ -7,7 +7,7 @@ public class PolymorphismDemo {
     public static void main(String[] args)
     {
         testPolymorphism();
-        dogpark();
+        //dogpark();
     }
 
     public static void testPolymorphism()
