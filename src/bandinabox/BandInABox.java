@@ -13,14 +13,16 @@ public class BandInABox {
         ArrayList<Instrument> band = new ArrayList<Instrument>();
 
         Guitar guitar = new Guitar();
-        //band.add(guitar);
+        band.add(guitar);
 
         // add a bass
+        Bass bass = new Bass();
+        band.add(bass);
 
         // add a violin
 
         playAll(band, yankeeDoodle);
-        //playAllWithSound(band, yankeeDoodle);
+        playAllWithSound(band, yankeeDoodle);
     }
 
     /** Show the instruments playing (textually). */

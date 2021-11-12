@@ -1,9 +1,11 @@
 package poly2;
 
-public class Pet {
+public abstract class Pet {
 
     private String name;
     private int age;
+
+    public abstract void speak();
 
     public Pet(String newName, int newAge) {
         System.out.println("Constructing a pet object.");
