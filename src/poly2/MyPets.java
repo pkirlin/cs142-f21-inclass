@@ -11,11 +11,21 @@ public class MyPets {
         mypets.add(new ShowDog("Lassie", 5));
         mypets.add(new Cat("Snowball", 3));
 
+        Pet genericPet = new Dog("blahblah", 7);
+        genericPet.speak();
+
         for (Pet p : mypets)
         {
             System.out.println(p);
             // I want p to speak!
-
+            p.speak();
+            /*if (p instanceof Dog) {
+                Dog d = (Dog)p;
+                d.speak();
+            }
+            else if (p instanceof Cat) {
+                ((Cat)p).speak();
+            }*/
         }
     }
 }

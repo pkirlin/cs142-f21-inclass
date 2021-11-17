@@ -1,6 +1,6 @@
 package poly2;
 
-public class Pet {
+public abstract class Pet {
 
     private String name;
     private int age;
@@ -10,6 +10,8 @@ public class Pet {
         name = newName;
         age = newAge;
     }
+
+    public abstract void speak();
 
     public String getName() {
         return name;
