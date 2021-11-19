@@ -2,7 +2,7 @@ package interfaces1;
 
 import java.awt.*;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable {
     private Color color;
 
     public abstract double getArea();
