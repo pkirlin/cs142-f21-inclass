@@ -223,3 +223,6 @@ sometimes, you can stop.
 
 __Your answer here__
 
+Can you improve your card counting?  Can you change your
+hit/stand strategy?  Use google to find other card
+counting systems.
