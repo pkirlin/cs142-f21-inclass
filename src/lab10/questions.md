@@ -1,5 +1,10 @@
 # Lab 10: Blackjack
 
+Names:
+- Name 1
+- Name 2
+- Name 3
+
 Blackjack is a widely-played game in casinos.  Also known
 as Twenty-One, the game is played solely between a single
 player and the dealer (a casino employee, so you are
@@ -223,3 +228,6 @@ sometimes, you can stop.
 
 __Your answer here__
 
+Can you improve your card counting?  Can you change your
+hit/stand strategy?  Use google to find other card
+counting systems.
