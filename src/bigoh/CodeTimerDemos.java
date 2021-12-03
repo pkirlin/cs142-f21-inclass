@@ -5,7 +5,7 @@ import java.util.List;
 public class CodeTimerDemos {
     public static void main(String[] args)
     {
-        measureSumOfArray();
+        //measureSumOfArray();
 
         //measureSumOf2DArray();
 
@@ -13,7 +13,11 @@ public class CodeTimerDemos {
 
         //measureFibonacci();
 
-        measureFastFibonacci();
+        //measureFastFibonacci();
+
+        //measureArrayListAddAndRemove();
+
+        //measureArrayListAccess();
     }
 
     public static void measureSumOfArray() {
@@ -33,11 +37,21 @@ public class CodeTimerDemos {
 
     public static void measureFibonacci() {
         FibonacciTimer timer = new FibonacciTimer();
-        timer.measureTimeOnAllSizes(List.of(5, 10, 15, 20, 25, 30));
+        timer.measureTimeOnAllSizes(List.of(10, 12, 14, 16, 18, 20, 22, 24, 26, 28));
     }
 
     public static void measureFastFibonacci() {
         FastFibonacciTimer timer = new FastFibonacciTimer();
-        timer.measureTimeOnAllSizes(List.of(5, 10, 15, 20, 25, 30));
+        timer.measureTimeOnAllSizes(List.of(10, 12, 14, 16, 18, 20, 22, 24, 26, 28));
+    }
+
+    public static void measureArrayListAddAndRemove() {
+        ArrayListAddAndRemoveTimer timer = new ArrayListAddAndRemoveTimer();
+        timer.measureTimeOnAllSizes(List.of(1000, 2000, 4000, 8000, 16000, 32000, 64000));
+    }
+
+    public static void measureArrayListAccess() {
+        ArrayListAccessTimer timer = new ArrayListAccessTimer();
+        timer.measureTimeOnAllSizes(List.of(1000, 2000, 4000, 8000, 16000, 32000, 64000));
     }
 }
