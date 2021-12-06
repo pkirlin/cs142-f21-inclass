@@ -15,7 +15,7 @@ public class CodeTimerDemos {
 
         //measureFastFibonacci();
 
-        //measureArrayListAddAndRemove();
+        measureArrayListAddAndRemove();
 
         //measureArrayListAccess();
     }

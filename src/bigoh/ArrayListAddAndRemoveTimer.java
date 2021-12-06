@@ -12,11 +12,11 @@ public class ArrayListAddAndRemoveTimer extends CodeTimer {
         watch.start();
 
         ArrayList<Integer> arraylist = RandomArrayMaker.makeRandomArrayList(inputSize, 10000);
-
+        LinkedList<Integer> linkedlist = new LinkedList<Integer>(arraylist);
         for (int x = 0; x < 1000000; x++) { // for loop that runs the code inside many times
 
-            arraylist.add(0, 10);
-            arraylist.remove(0);
+            linkedlist.add(0, 10);
+            linkedlist.remove(0);
 
         }
 
