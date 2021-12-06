@@ -161,6 +161,8 @@ list.
 When done, your code for demo2() should output `1 2 3 4` or 
 or something very similar (line breaks are ok).
 
+### CHECK-IN
+
 ## Part C: The LinkedList class
 
 Open LinkedList.java and LinkedListDemo.java.  Run LinkedListDemo.
@@ -231,3 +233,5 @@ this sum.  The method declaration will look like:
 public int sum() 
 
 Test your method by adding code to LinkedListDemo.
+
+### CHECK-IN
